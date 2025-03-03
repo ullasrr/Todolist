@@ -1,0 +1,44 @@
+.todoitems{
+    display: flex;
+    justify-content: center;
+    padding: 16px 0px;
+    align-items: center;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .todo-item-text {
+    flex-grow: 1;
+    font-size: 18px;
+    color: #333;
+    margin: 0 20px;
+    word-break: break-word;
+  }
+  
+  .todo-item-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .tick-icon,
+  .cross-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .tick-icon:hover,
+  .cross-icon:hover {
+    opacity: 0.7;
+  }
+  
