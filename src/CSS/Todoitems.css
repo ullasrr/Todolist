@@ -1,44 +1,56 @@
-.todoitems{
-    display: flex;
-    justify-content: center;
-    padding: 16px 0px;
-    align-items: center;
+
+
+/* new */
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
 }
 
 .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    background-color: aliceblue;
-    border-radius: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .todo-item-text {
-    flex-grow: 1;
-    font-size: 18px;
-    color: #333;
-    margin: 0 20px;
-    word-break: break-word;
-  }
-  
-  .todo-item-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .tick-icon,
-  .cross-icon {
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-  }
-  
-  .tick-icon:hover,
-  .cross-icon:hover {
-    opacity: 0.7;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item button {
+  background: #dc3545;
+}
+
+.todo-item button:hover {
+  background: #c82333;
+}
+
+
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 12px; /* Increased padding */
+  margin: 8px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* Larger font */
+}
+
+.todo-item button {
+  background: #dc3545;
+  font-size: 16px; /* Larger font */
+  padding: 8px 12px;
+}
+
+.todo-item button:hover {
+  background: #c82333;
+}

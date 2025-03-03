@@ -1,18 +1,22 @@
-import '../CSS/Todoitems.css';
-import tick from '../assets/correct_colored.png'
-import not_tick from '../assets/correct.png'
-import cross from '../assets/close.png'
-const Todoitems = ({no,display,text}) => {
-  return (
-    <div className="todoitems">
-      <div className="todoitems-container">
-      <img src={not_tick} alt="" width="35" height="35" />
-        <img src={tick} alt="" width="35" height="35"/>
-        <div className="todoitems-text">{text}</div>
-      </div>
-        <img src={cross} alt="" width="35" height="35"/>
-    </div>
-  )
-}
 
-export default Todoitems
+
+import React from "react";
+import "../CSS/Todoitems.css";
+
+const TodoItems = ({ tasks, deleteTask }) => {
+  return (
+    <ul className="todo-list">
+      {tasks.map((task) => (
+        <li key={task.id} className="todo-item">
+          <span>{task.text}</span>
+          <button onClick={() => deleteTask(task.id)}>Delete</button>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default TodoItems;
+
+
+
