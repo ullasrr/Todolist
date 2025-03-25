@@ -1,10 +1,15 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TodoItems from "./Todoitems";
 import "../CSS/Todo.css";
 
 const Todo = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(()=>{
+    const savedTasks=localStorage.getItem("tasks");
+    return savedTasks?JSON.parse(savedTasks) : [];
+  })
+
+
   const [task, setTask] = useState("");
 
   const addTask = () => {
@@ -17,6 +22,11 @@ const Todo = () => {
   const deleteTask = (id) => {
     setTasks(tasks.filter((t) => t.id !== id));
   };
+
+  useEffect(()=>{
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+  },[tasks]);
+
 
   return (
     <div className="todo-container">
